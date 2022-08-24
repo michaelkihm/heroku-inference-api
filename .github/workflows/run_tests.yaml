@@ -15,12 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.10
-        uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v2
         with:
+          miniconda-version: "latest"
           activate-environment: heroko-app
           environment-file: environment.yaml
-          python-version: 3.10
           auto-activate-base: false
       - name: Lint with flake8
         run: |
