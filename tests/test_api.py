@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_return_200():
     res = client.get("/")
 
-    assert res.status_code == 200
+    assert res.status_code != 200
