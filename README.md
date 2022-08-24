@@ -1,0 +1,1 @@
+# Inference model deployed with REST API

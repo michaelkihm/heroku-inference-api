@@ -1,0 +1,7 @@
+# For now ignore ml stuff
+data
+model_training
+
+
+# mac os files
+.DS_Store
