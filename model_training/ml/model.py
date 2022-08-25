@@ -80,14 +80,20 @@ def save_models(model, encoder, label_binarizer):
     joblib.dump(label_binarizer, os.path.join(MODEL_DIR, 'label_binarizer.pkl'))
 
 
-def evaluate_model(test, cat_features):
+def load_models():
     model = joblib.load(os.path.join(MODEL_DIR, 'model.pkl'))
     encoder = joblib.load(os.path.join(MODEL_DIR, 'encoder.pkl'))
     lb = joblib.load(os.path.join(MODEL_DIR, 'label_binarizer.pkl'))
 
+    return model, encoder, lb
+
+
+def evaluate_model(test, cat_features):
+    model, encoder, lb = load_models()
+
     X_test, y_test, *_ = process_data(test, cat_features, "salary", False, encoder, lb)
 
-    y_pred = model.predict(X_test)
+    y_pred = inference(model, X_test)
 
     precision, recall, fbeta = compute_model_metrics(y_test, y_pred)
     return precision, recall, fbeta
