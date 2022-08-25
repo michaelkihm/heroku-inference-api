@@ -24,6 +24,12 @@ jobs:
           activate-environment: heroku-app
           environment-file: environment.yaml
           auto-activate-base: false
+      - name: Fetch Train data
+        env:
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+        run: |
+          conda activate heroku-app
+          dvc pull -r driveremote
       - name: Lint with flake8
         run: |
           conda activate heroku-app
