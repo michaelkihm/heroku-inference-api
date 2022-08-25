@@ -1,6 +1,17 @@
 import numpy as np
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 
+CAT_FEATURES = [
+    "workclass",
+    "education",
+    "marital-status",
+    "occupation",
+    "relationship",
+    "race",
+    "sex",
+    "native-country",
+]
+
 
 def process_data(
     X, categorical_features=[], label=None, training=True, encoder=None, lb=None
@@ -76,4 +87,8 @@ def clean_data(df):
     """ Clean census dataset"""
     df.replace({'?': None}, inplace=True)
     df.dropna(inplace=True)
+    df.drop("fnlgt", axis="columns", inplace=True)
+    df.drop("education-num", axis="columns", inplace=True)
+    df.drop("capital-gain", axis="columns", inplace=True)
+    df.drop("capital-loss", axis="columns", inplace=True)
     return df
