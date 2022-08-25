@@ -1,9 +1,11 @@
-# For now ignore ml stuff
-model_training
-
 
 # mac os files
 .DS_Store
 
-#python files
+# python files
 *.pyc
+.pytest_cache
+.ipynb_checkpoints
+
+# Logdir
+logs
