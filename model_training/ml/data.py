@@ -68,3 +68,10 @@ def process_data(
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
     return X, y, encoder, lb
+
+
+def clean_data(df):
+    """ Clean census dataset"""
+    df.replace({'?': None}, inplace=True)
+    df.dropna(inplace=True)
+    return df
