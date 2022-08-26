@@ -16,3 +16,6 @@ dependencies:
   - pip:
       - dvc==2.21.0
       - dvc-gdrive==2.19.0
+      - mock==4.0.3
+      - mock_open==1.4.0
+      - black==22.6.0
