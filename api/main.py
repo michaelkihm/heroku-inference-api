@@ -8,13 +8,16 @@ from model_training.ml.model import inference, load_models
 
 from .models import InferenceResponse, Person
 
-if "DYNO" in os.environ and os.path.isdir(".dvc"):
-    os.system("dvc config core.no_scm true")
-    if os.system("dvc pull -r gdriveremote") != 0:
-        exit("dvc pull failed")
-    os.system("rm -r .dvc .apt/usr/lib/dvc")
-
 app = FastAPI()
+
+
+@app.on_event("startup")
+def fetch_model():
+    if "DYNO" in os.environ and os.path.isdir(".dvc"):
+        os.system("dvc config core.no_scm true")
+        if os.system("dvc pull -r gdriveremote") != 0:
+            exit("dvc pull failed")
+        os.system("rm -r .dvc .apt/usr/lib/dvc")
 
 
 @app.get("/")
