@@ -19,7 +19,7 @@ logging.info("Load and process train data")
 data = pd.read_csv("./data/census.csv", skipinitialspace=True)
 
 data = clean_data(data)
-data.to_csv("./data/cleaned_census.csv")
+data.to_csv("./data/cleaned_census.csv", index=False)
 
 logging.info("Split data")
 train, test = train_test_split(data, test_size=0.20)
