@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 from fastapi import FastAPI
 
@@ -5,6 +7,12 @@ from model_training.ml.data import CAT_FEATURES, process_data
 from model_training.ml.model import inference, load_models
 
 from .models import InferenceResponse, Person
+
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc config core.no_scm true")
+    if os.system("dvc pull -r gdriveremote") != 0:
+        exit("dvc pull failed")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
 
 app = FastAPI()
 
