@@ -1,7 +1,7 @@
-
 import os
 
 import joblib
+import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 
@@ -55,7 +55,7 @@ def compute_model_metrics(y, preds):
 
 
 def inference(model, X):
-    """ Run model inferences and return the predictions.
+    """Run model inferences and return the predictions.
 
     Inputs
     ------
@@ -72,24 +72,22 @@ def inference(model, X):
 
 
 def save_models(model, encoder, label_binarizer):
-    """ Saves Model, Enocder and LabelBinarizer
-    """
+    """Saves Model, Enocder and LabelBinarizer"""
     os.makedirs(MODEL_DIR, exist_ok=True)
-    joblib.dump(model, os.path.join(MODEL_DIR, 'model.pkl'))
-    joblib.dump(encoder, os.path.join(MODEL_DIR, 'encoder.pkl'))
-    joblib.dump(label_binarizer, os.path.join(MODEL_DIR, 'label_binarizer.pkl'))
+    joblib.dump(model, os.path.join(MODEL_DIR, "model.pkl"))
+    joblib.dump(encoder, os.path.join(MODEL_DIR, "encoder.pkl"))
+    joblib.dump(label_binarizer, os.path.join(MODEL_DIR, "label_binarizer.pkl"))
 
 
 def load_models():
-    model = joblib.load(os.path.join(MODEL_DIR, 'model.pkl'))
-    encoder = joblib.load(os.path.join(MODEL_DIR, 'encoder.pkl'))
-    lb = joblib.load(os.path.join(MODEL_DIR, 'label_binarizer.pkl'))
+    model = joblib.load(os.path.join(MODEL_DIR, "model.pkl"))
+    encoder = joblib.load(os.path.join(MODEL_DIR, "encoder.pkl"))
+    lb = joblib.load(os.path.join(MODEL_DIR, "label_binarizer.pkl"))
 
     return model, encoder, lb
 
 
-def evaluate_model(test, cat_features):
-    model, encoder, lb = load_models()
+def evaluate_model(test, cat_features, model, encoder, lb):
 
     X_test, y_test, *_ = process_data(test, cat_features, "salary", False, encoder, lb)
 
@@ -97,3 +95,22 @@ def evaluate_model(test, cat_features):
 
     precision, recall, fbeta = compute_model_metrics(y_test, y_pred)
     return precision, recall, fbeta
+
+
+def data_slice_evaluation(cleaned_df: pd.DataFrame, model, encoder, lb, cat_features):
+    """computes model metrics on slices of the data"""
+
+    with open("models/slice_output.txt", "w") as f:
+        for col in cat_features:
+            for value in cleaned_df[col].unique():
+                precision, recall, fbeta = evaluate_model(
+                    cleaned_df[cleaned_df[col] == value],
+                    cat_features,
+                    model,
+                    encoder,
+                    lb,
+                )
+                f.write(f"Evaluate column {col} with value {value}\n")
+                f.write(
+                    f"- precission: {precision}\n- recall: {recall}\n- fbeta: {fbeta}\n\n"
+                )

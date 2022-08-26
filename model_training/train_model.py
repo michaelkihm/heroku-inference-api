@@ -4,7 +4,7 @@ import logging
 
 import pandas as pd
 from ml.data import CAT_FEATURES, clean_data, process_data
-from ml.model import evaluate_model, save_models, train_model
+from ml.model import data_slice_evaluation, evaluate_model, save_models, train_model
 from sklearn.model_selection import train_test_split
 
 logging.basicConfig(
@@ -36,5 +36,10 @@ model = train_model(X_train, y_train)
 save_models(model, encoder, lb)
 
 # Evaluate model
-precision, recall, fbeta = evaluate_model(test, CAT_FEATURES)
-logging.info(f"Evaluated model with following scores: \n- precision: {precision}\n- recall: {recall}\n- fbeta: {fbeta}")
+precision, recall, fbeta = evaluate_model(test, CAT_FEATURES, model, encoder, lb)
+logging.info(
+    f"Evaluated model with following scores: \n- precision: {precision}\n- recall: {recall}\n- fbeta: {fbeta}"
+)
+
+logging.info("Evaluate model on slices. Output file located at models/output.txt")
+data_slice_evaluation(test, model, encoder, lb, CAT_FEATURES)

@@ -1,0 +1,480 @@
+Evaluate column workclass with value Self-emp-not-inc
+- precission: 0.7625
+- recall: 0.40939597315436244
+- fbeta: 0.5327510917030568
+
+Evaluate column workclass with value Private
+- precission: 0.7531083481349912
+- recall: 0.42105263157894735
+- fbeta: 0.5401273885350318
+
+Evaluate column workclass with value Local-gov
+- precission: 0.6555555555555556
+- recall: 0.5130434782608696
+- fbeta: 0.575609756097561
+
+Evaluate column workclass with value Self-emp-inc
+- precission: 0.7863247863247863
+- recall: 0.71875
+- fbeta: 0.7510204081632653
+
+Evaluate column workclass with value State-gov
+- precission: 0.7049180327868853
+- recall: 0.6231884057971014
+- fbeta: 0.6615384615384615
+
+Evaluate column workclass with value Federal-gov
+- precission: 0.723404255319149
+- recall: 0.4722222222222222
+- fbeta: 0.5714285714285714
+
+Evaluate column education with value HS-grad
+- precission: 0.6666666666666666
+- recall: 0.0670391061452514
+- fbeta: 0.12182741116751268
+
+Evaluate column education with value Bachelors
+- precission: 0.7395348837209302
+- recall: 0.7227272727272728
+- fbeta: 0.7310344827586207
+
+Evaluate column education with value Some-college
+- precission: 0.5752212389380531
+- recall: 0.2549019607843137
+- fbeta: 0.35326086956521735
+
+Evaluate column education with value Prof-school
+- precission: 0.8829787234042553
+- recall: 0.8556701030927835
+- fbeta: 0.8691099476439791
+
+Evaluate column education with value Assoc-voc
+- precission: 0.6176470588235294
+- recall: 0.28378378378378377
+- fbeta: 0.3888888888888889
+
+Evaluate column education with value 7th-8th
+- precission: 0.5
+- recall: 0.25
+- fbeta: 0.3333333333333333
+
+Evaluate column education with value Preschool
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column education with value 10th
+- precission: 0.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column education with value 11th
+- precission: 0.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column education with value Assoc-acdm
+- precission: 0.6190476190476191
+- recall: 0.28888888888888886
+- fbeta: 0.3939393939393939
+
+Evaluate column education with value Masters
+- precission: 0.8192090395480226
+- recall: 0.7967032967032966
+- fbeta: 0.8077994428969358
+
+Evaluate column education with value 5th-6th
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column education with value 1st-4th
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column education with value Doctorate
+- precission: 0.8723404255319149
+- recall: 0.803921568627451
+- fbeta: 0.8367346938775511
+
+Evaluate column education with value 9th
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column education with value 12th
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column marital-status with value Widowed
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column marital-status with value Married-civ-spouse
+- precission: 0.7436974789915967
+- recall: 0.5404580152671755
+- fbeta: 0.6259946949602121
+
+Evaluate column marital-status with value Never-married
+- precission: 0.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column marital-status with value Divorced
+- precission: 1.0
+- recall: 0.054945054945054944
+- fbeta: 0.10416666666666666
+
+Evaluate column marital-status with value Married-spouse-absent
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column marital-status with value Separated
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column marital-status with value Married-AF-spouse
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column occupation with value Farming-fishing
+- precission: 0.5
+- recall: 0.04
+- fbeta: 0.07407407407407407
+
+Evaluate column occupation with value Tech-support
+- precission: 0.6206896551724138
+- recall: 0.2903225806451613
+- fbeta: 0.3956043956043956
+
+Evaluate column occupation with value Sales
+- precission: 0.7567567567567568
+- recall: 0.43523316062176165
+- fbeta: 0.5526315789473685
+
+Evaluate column occupation with value Prof-specialty
+- precission: 0.7686170212765957
+- recall: 0.7810810810810811
+- fbeta: 0.774798927613941
+
+Evaluate column occupation with value Other-service
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column occupation with value Craft-repair
+- precission: 0.5
+- recall: 0.0546448087431694
+- fbeta: 0.09852216748768473
+
+Evaluate column occupation with value Exec-managerial
+- precission: 0.7594594594594595
+- recall: 0.7168367346938775
+- fbeta: 0.7375328083989502
+
+Evaluate column occupation with value Transport-moving
+- precission: 0.8
+- recall: 0.056338028169014086
+- fbeta: 0.10526315789473684
+
+Evaluate column occupation with value Adm-clerical
+- precission: 0.53125
+- recall: 0.1619047619047619
+- fbeta: 0.24817518248175183
+
+Evaluate column occupation with value Protective-serv
+- precission: 0.8888888888888888
+- recall: 0.2222222222222222
+- fbeta: 0.3555555555555555
+
+Evaluate column occupation with value Machine-op-inspct
+- precission: 0.25
+- recall: 0.021739130434782608
+- fbeta: 0.04
+
+Evaluate column occupation with value Handlers-cleaners
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column occupation with value Priv-house-serv
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column occupation with value Armed-Forces
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column relationship with value Not-in-family
+- precission: 0.6666666666666666
+- recall: 0.011976047904191617
+- fbeta: 0.023529411764705882
+
+Evaluate column relationship with value Husband
+- precission: 0.7430875576036866
+- recall: 0.5541237113402062
+- fbeta: 0.6348425196850394
+
+Evaluate column relationship with value Own-child
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column relationship with value Other-relative
+- precission: 1.0
+- recall: 0.1111111111111111
+- fbeta: 0.19999999999999998
+
+Evaluate column relationship with value Unmarried
+- precission: 1.0
+- recall: 0.06
+- fbeta: 0.11320754716981131
+
+Evaluate column relationship with value Wife
+- precission: 0.7469879518072289
+- recall: 0.4397163120567376
+- fbeta: 0.5535714285714286
+
+Evaluate column race with value White
+- precission: 0.7418630751964085
+- recall: 0.47315676449534716
+- fbeta: 0.5777972027972028
+
+Evaluate column race with value Other
+- precission: 1.0
+- recall: 0.75
+- fbeta: 0.8571428571428571
+
+Evaluate column race with value Asian-Pac-Islander
+- precission: 0.7741935483870968
+- recall: 0.42857142857142855
+- fbeta: 0.5517241379310344
+
+Evaluate column race with value Black
+- precission: 0.7333333333333333
+- recall: 0.29333333333333333
+- fbeta: 0.419047619047619
+
+Evaluate column race with value Amer-Indian-Eskimo
+- precission: 1.0
+- recall: 0.375
+- fbeta: 0.5454545454545454
+
+Evaluate column sex with value Male
+- precission: 0.7437070938215103
+- recall: 0.4965622612681436
+- fbeta: 0.5955107650022905
+
+Evaluate column sex with value Female
+- precission: 0.75
+- recall: 0.2727272727272727
+- fbeta: 0.39999999999999997
+
+Evaluate column native-country with value United-States
+- precission: 0.7411111111111112
+- recall: 0.46255201109570043
+- fbeta: 0.569598633646456
+
+Evaluate column native-country with value Dominican-Republic
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value South
+- precission: 0.75
+- recall: 1.0
+- fbeta: 0.8571428571428571
+
+Evaluate column native-country with value India
+- precission: 0.5
+- recall: 0.5
+- fbeta: 0.5
+
+Evaluate column native-country with value Vietnam
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Mexico
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Cuba
+- precission: 0.8
+- recall: 0.5
+- fbeta: 0.6153846153846154
+
+Evaluate column native-country with value Puerto-Rico
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column native-country with value Philippines
+- precission: 0.75
+- recall: 0.375
+- fbeta: 0.5
+
+Evaluate column native-country with value Greece
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Iran
+- precission: 0.5
+- recall: 0.25
+- fbeta: 0.3333333333333333
+
+Evaluate column native-country with value Portugal
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Peru
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Honduras
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value El-Salvador
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Italy
+- precission: 0.6666666666666666
+- recall: 0.3333333333333333
+- fbeta: 0.4444444444444444
+
+Evaluate column native-country with value China
+- precission: 1.0
+- recall: 0.7142857142857143
+- fbeta: 0.8333333333333333
+
+Evaluate column native-country with value England
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column native-country with value Trinadad&Tobago
+- precission: 0.0
+- recall: 1.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Nicaragua
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Canada
+- precission: 0.5
+- recall: 0.3333333333333333
+- fbeta: 0.4
+
+Evaluate column native-country with value Germany
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column native-country with value Hong
+- precission: 1.0
+- recall: 0.5
+- fbeta: 0.6666666666666666
+
+Evaluate column native-country with value Jamaica
+- precission: 0.6666666666666666
+- recall: 0.6666666666666666
+- fbeta: 0.6666666666666666
+
+Evaluate column native-country with value Guatemala
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Columbia
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Ecuador
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Cambodia
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Japan
+- precission: 1.0
+- recall: 0.6
+- fbeta: 0.7499999999999999
+
+Evaluate column native-country with value Taiwan
+- precission: 0.6666666666666666
+- recall: 1.0
+- fbeta: 0.8
+
+Evaluate column native-country with value Laos
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Haiti
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Poland
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Outlying-US(Guam-USVI-etc)
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Thailand
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Ireland
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
+Evaluate column native-country with value Hungary
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value Yugoslavia
+- precission: 1.0
+- recall: 0.0
+- fbeta: 0.0
+
+Evaluate column native-country with value France
+- precission: 1.0
+- recall: 0.6666666666666666
+- fbeta: 0.8
+
+Evaluate column native-country with value Scotland
+- precission: 1.0
+- recall: 1.0
+- fbeta: 1.0
+
