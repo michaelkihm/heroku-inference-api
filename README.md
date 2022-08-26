@@ -20,7 +20,7 @@ python model_training/train_model.py
 ```
 
 ## API URL
-https://inferenceapi0.herokuapp.com/inference
+https://inferenceapi0.herokuapp.com/docs
 
 ## Required Files
 - [continuous_deloyment.png](screenshots/continuous_deloyment.png)
