@@ -84,11 +84,10 @@ def process_data(
 
 
 def clean_data(df):
-    """ Clean census dataset"""
-    df.replace({'?': None}, inplace=True)
+    """Clean census dataset"""
+    df.replace({"?": None}, inplace=True)
     df.dropna(inplace=True)
-    df.drop("fnlgt", axis="columns", inplace=True)
-    df.drop("education-num", axis="columns", inplace=True)
-    df.drop("capital-gain", axis="columns", inplace=True)
-    df.drop("capital-loss", axis="columns", inplace=True)
+    to_drop_cols = ["fnlgt", "capital-gain", "capital-loss", "education-num"]
+    for col in to_drop_cols:
+        df.drop(col, axis="columns", inplace=True)
     return df
