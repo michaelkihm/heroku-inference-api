@@ -9,6 +9,7 @@ def test_root():
     res = client.get("/")
 
     assert res.status_code == 200
+    assert res.json()["message"] == "RandomForest inference API for census dataset"
 
 
 def test_inference_endpoint():
