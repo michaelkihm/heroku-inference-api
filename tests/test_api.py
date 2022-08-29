@@ -17,13 +17,13 @@ def test_inference_endpoint():
         "age": 23,
         "workclass": "Private",
         "education": "11th",
-        "maritalStatus": "Married-civ-spouse",
+        "marital-status": "Married-civ-spouse",
         "occupation": "Transport-moving",
         "relationship": "Husband",
         "race": "White",
         "sex": "Male",
-        "hoursPerWeek": 40,
-        "nativeCountry": "United-States",
+        "hours-per-week": 40,
+        "native-country": "United-States",
     }
     res = client.post("/inference", json=request_body)
     res_json = res.json()

@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Person(BaseModel):
@@ -40,7 +40,7 @@ class Person(BaseModel):
         "Separated",
         "Married-AF-spouse",
         "Widowed",
-    ]
+    ] = Field(alias="marital-status")
     occupation: Literal[
         "Adm-clerical",
         "Exec-managerial",
@@ -62,7 +62,7 @@ class Person(BaseModel):
     ]
     race: Literal["White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other"]
     sex: Literal["Male", "Female"]
-    hoursPerWeek: int
+    hoursPerWeek: int = Field(alias="hours-per-week")
     nativeCountry: Literal[
         "United-States",
         "Cuba",
@@ -105,7 +105,7 @@ class Person(BaseModel):
         "Ireland",
         "Hungary",
         "Holand-Netherlands",
-    ]
+    ] = Field(alias="native-country")
 
     class Config:
         schema_extra = {
@@ -113,13 +113,13 @@ class Person(BaseModel):
                 "age": 23,
                 "workclass": "Private",
                 "education": "11th",
-                "maritalStatus": "Married-civ-spouse",
+                "marital-status": "Married-civ-spouse",
                 "occupation": "Transport-moving",
                 "relationship": "Husband",
                 "race": "White",
                 "sex": "Male",
-                "hoursPerWeek": 40,
-                "nativeCountry": "United-States",
+                "hours-per-week": 40,
+                "native-country": "United-States",
             }
         }
 
