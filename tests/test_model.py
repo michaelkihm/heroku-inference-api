@@ -6,7 +6,7 @@ from model_training.ml.data import CAT_FEATURES, process_data
 from model_training.ml.model import data_slice_evaluation, inference
 
 
-def test_inference(models):
+def test_inference_for_salary_lt_50k(models):
     data = pd.DataFrame(
         {
             "age": [43],
@@ -27,7 +27,31 @@ def test_inference(models):
     y_pred = inference(model, X)
 
     assert len(y_pred) == 1
-    assert y_pred[0] == 1 or y_pred[0] == 0
+    assert y_pred[0] == 0, "Predicted salary should be 0 (<=50K)"
+
+
+def test_inference_for_salary_gt_50k(models):
+    data = pd.DataFrame(
+        {
+            "age": [40],
+            "workclass": ["Private"],
+            "education": ["Masters"],
+            "marital-status": ["Married-civ-spouse"],
+            "occupation": ["Exec-managerial"],
+            "relationship": ["Husband"],
+            "race": ["White"],
+            "sex": ["Male"],
+            "hours-per-week": [40],
+            "native-country": ["United-States"],
+        }
+    )
+    model, encoder, lb = models
+    X, *_ = process_data(data, CAT_FEATURES, training=False, encoder=encoder, lb=lb)
+
+    y_pred = inference(model, X)
+
+    assert len(y_pred) == 1
+    assert y_pred[0] == 1, "Predicted salary should be 1 (>50K)"
 
 
 def test_data_slice_evaluation(cleaned_data, models):
