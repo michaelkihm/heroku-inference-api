@@ -12,7 +12,7 @@ def test_root():
     assert res.json()["message"] == "RandomForest inference API for census dataset"
 
 
-def test_inference_endpoint():
+def test_inference_for_salary_lt_50k():
     request_body = {
         "age": 23,
         "workclass": "Private",
@@ -29,4 +29,24 @@ def test_inference_endpoint():
     res_json = res.json()
 
     assert res.status_code == 200
-    assert res_json["salary"] in ["<=50K", ">50K"]
+    assert res_json["salary"] == "<=50K"
+
+
+def test_inference_for_salary_gt_50k():
+    request_body = {
+        "age": 40,
+        "workclass": "Private",
+        "education": "Masters",
+        "marital-status": "Married-civ-spouse",
+        "occupation": "Exec-managerial",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
+        "hours-per-week": 40,
+        "native-country": "United-States",
+    }
+    res = client.post("/inference", json=request_body)
+    res_json = res.json()
+
+    assert res.status_code == 200
+    assert res_json["salary"] == ">50K"
